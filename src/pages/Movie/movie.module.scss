@@ -1,0 +1,115 @@
+.movie_section {
+  padding: 20px 20px 40px 20px;
+  display: flex;
+  flex-direction: column;
+  .go_back_link {
+    margin-bottom: 30px;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px 8px;
+    width: fit-content;
+    cursor: pointer;
+    &:hover {
+      transform: scale(1.1);
+      transition: 0.3s;
+    }
+    a {
+      color: #0f1015;
+      font-weight: bold;
+      text-decoration: none;
+      &:hover {
+        color: #000;
+      }
+    }
+  }
+  .movie_title_content {
+    display: flex;
+    align-items: center;
+    grid-gap: 20px;
+    @media (max-width: 600px) {
+      flex-direction: column;
+    }
+    .movie_img {
+      width: 350px;
+      @media (max-width: "600px") {
+        max-width: none;
+        width: 100%;
+      }
+      img {
+        width: 350px;
+        @media (max-width: "600px") {
+          width: 100%;
+        }
+      }
+    }
+    .content {
+      display: flex;
+      flex-direction: column;
+      grid-gap: 15px;
+      .movie_rating {
+        display: flex;
+        align-items: center;
+        grid-gap: 10px;
+        p {
+          font-weight: bold;
+          color: #fff;
+        }
+      }
+      p {
+        font-size: 17px;
+      }
+    }
+  }
+  .movie_content_info {
+    color: grey;
+    margin-top: 40px;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    grid-gap: 20px;
+    > div {
+      padding-bottom: 5px;
+      border-bottom: 1px solid grey;
+      display: flex;
+      width: 100%;
+      grid-gap: 100px;
+      @media (max-width: "550px") {
+        grid-gap: 40px;
+      }
+      @media (max-width: 480px) {
+        flex-direction: column;
+        grid-gap: 10px;
+      }
+      > p:first-child {
+        max-width: 200px;
+        width: 100%;
+        font-weight: 600;
+        color: #565a62;
+      }
+      a {
+        color: #565a62;
+        text-decoration: none;
+        word-break: break-all;
+        &:hover {
+          color: grey;
+        }
+      }
+    }
+    .schedule_days {
+      display: flex;
+      align-items: center;
+      @media (max-width: 480px) {
+        align-items: baseline;
+      }
+      > div {
+        display: flex;
+        flex-wrap: wrap;
+      }
+    }
+  }
+}
+
+.loading_container {
+  display: flex;
+  min-height: 100vh;
+}
