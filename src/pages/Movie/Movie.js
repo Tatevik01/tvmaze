@@ -92,7 +92,9 @@ export default function Movie() {
             </div>
             <div>
               <p>More information</p>
-              <Link to={movie.url}>{movie.url}</Link>
+              <a href={movie.url} target="_blank">
+                {movie.url}
+              </a>
             </div>
           </div>
         </div>
